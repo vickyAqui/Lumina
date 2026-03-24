@@ -19,6 +19,7 @@
   --accent:  #3b82f6;
   --cyan:    #22d3ee;
   --glow:    rgba(59, 130, 246, .35);
+  --black:  rgb(34, 34, 34);
   --content-max: 1180px;
   --gutter: clamp(18px, 4vw, 52px);
 }
@@ -29,7 +30,7 @@ html {
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: var(--ink);
+  background: white;
   color: var(--white);
   overflow-x: hidden;
   cursor: none;
@@ -181,13 +182,24 @@ nav {
 
 /* ── HERO ────────────────────────────────────────────────── */
 #hero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  padding-top: 72px;
+  display: flex;
+  padding-top: 80px;
   padding-inline: var(--gutter);
   position: relative;
   overflow: hidden;
+  background-color: white;
+}
+
+#heroTop{
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .hero-grid {
@@ -195,8 +207,8 @@ nav {
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, .022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .022) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.022) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 100%);
 }
@@ -219,15 +231,11 @@ nav {
 }
 
 .hero-brand-spot {
-  position: absolute;
-  left: 50%;
-  top: 52%;
-  transform: translate(-108%, -50%);
-  width: min(37vw, 500px);
+  max-width: 360px; width: 100%;
   z-index: 1;
   pointer-events: none;
   opacity: .92;
-  filter: drop-shadow(0 0 34px rgba(59, 130, 246, .22));
+  filter: drop-shadow(0 0 34px rgba(0, 98, 255, 0.22));
 }
 
 .hero-brand-spot img {
@@ -246,9 +254,9 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: min(100%, 920px);
-  margin-inline: auto;
-  padding: clamp(44px, 7vw, 80px) 0 40px;
+  width: fit-content;
+
+
 }
 
 .hero-eyebrow {
@@ -283,10 +291,10 @@ nav {
 
 .hero-headline {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4.5rem, 11vw, 9.5rem);
+  font-size: clamp(3.6rem, 10vw, 7rem);
   line-height: .92;
   letter-spacing: .02em;
-  color: var(--white);
+  color: var(--black);
   animation: fadeUp .9s .1s ease both;
 }
 
@@ -304,7 +312,7 @@ nav {
   margin: 32px auto 0;
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--dim);
+  color: black;
   font-weight: 300;
   animation: fadeUp .9s .2s ease both;
 }
@@ -342,7 +350,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, .05);
+  background: rgba(20, 20, 20, 0.55);
   border: 1px solid var(--border);
   color: var(--white);
   font-size: .88rem;
@@ -350,6 +358,7 @@ nav {
   padding: 14px 28px;
   border-radius: 8px;
   text-decoration: none;
+  color: rgb(255, 255, 255);
   transition: background .2s, border-color .2s;
 }
 
@@ -388,11 +397,11 @@ nav {
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, .2);
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .strip-track span.hi {
-  color: rgba(34, 211, 238, .45);
+  color: rgba(34, 211, 238, .75);
 }
 
 @keyframes marquee {
@@ -411,22 +420,23 @@ nav {
 }
 
 .section-title {
+  color: var(--black);
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2.6rem, 4.5vw, 4rem);
   letter-spacing: .04em;
   line-height: 1;
-  color: var(--white);
 }
 
 .section-title em {
   font-family: 'Instrument Serif', serif;
   font-style: italic;
-  color: var(--dim);
+  color: var(--black);
 }
 
 /* ── ABOUT ───────────────────────────────────────────────── */
 #sobre {
-  width: min(100%, var(--content-max));
+  background-color: white;
+  width: 90%;
   margin-inline: auto;
   padding: 120px var(--gutter);
   display: grid;
@@ -437,12 +447,14 @@ nav {
 
 .about-text .section-title {
   margin-bottom: 28px;
+  color: var(--black);
 }
 
 .about-body {
+  color: var(--black);
   font-size: .96rem;
   line-height: 1.85;
-  color: var(--dim);
+
   font-weight: 300;
   max-width: 460px;
 }
@@ -558,13 +570,15 @@ nav {
 
 /* ── COMMITMENTS ─────────────────────────────────────────── */
 #compromissos {
-  width: min(100%, var(--content-max));
+  background-color: white;
+  width: 90%;
   margin-inline: auto;
   padding: 120px var(--gutter);
   border-top: 1px solid var(--border);
 }
 
 .comp-header {
+  
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -675,7 +689,8 @@ nav {
 
 /* ── SERVICES ────────────────────────────────────────────── */
 #servicos {
-  width: min(100%, var(--content-max));
+  background-color: white;
+  width: 90%;
   margin-inline: auto;
   padding: 120px var(--gutter);
   border-top: 1px solid var(--border);
@@ -692,7 +707,7 @@ nav {
   align-items: center;
   gap: 32px;
   padding: 32px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--black);
   position: relative;
   transition: padding-left .3s;
 }
@@ -739,13 +754,13 @@ nav {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.65rem;
   letter-spacing: .06em;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 6px;
 }
 
 .serv-info p {
   font-size: .87rem;
-  color: var(--dim);
+  color: var(--black);
   line-height: 1.6;
 }
 
@@ -762,8 +777,8 @@ nav {
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--dim);
-  border: 1px solid var(--border);
+  color: var(--black);
+  border: 1px solid var(--black);;
   padding: 5px 12px;
   border-radius: 40px;
   transition: all .2s;
@@ -776,7 +791,8 @@ nav {
 
 /* ── CONTACT ─────────────────────────────────────────────── */
 #contato {
-  width: min(100%, var(--content-max));
+  background-color: white;
+  width: 100%;
   margin-inline: auto;
   padding: 120px var(--gutter);
   border-top: 1px solid var(--border);
@@ -796,7 +812,7 @@ nav {
 .contact-tagline {
   font-size: .96rem;
   line-height: 1.8;
-  color: var(--dim);
+  color: var(--black);
   max-width: 400px;
   margin-bottom: 48px;
 }
@@ -1070,17 +1086,11 @@ footer {
 
 /* ── RESPONSIVE ──────────────────────────────────────────── */
 @media (max-width: 1366px) {
-  .hero-brand-spot {
-    left: 50%;
-    top: 34%;
-    width: min(54vw, 420px);
-    transform: translate(-50%, -50%);
-    opacity: .24;
-  }
+
 
   .hero-content {
     width: min(100%, 800px);
-    padding-top: 56px;
+
   }
 
   .hero-headline {
@@ -1090,7 +1100,6 @@ footer {
 
 @media (max-width: 1200px) {
   .hero-brand-spot {
-    top: 32%;
     width: min(58vw, 390px);
     opacity: .2;
   }
@@ -1106,21 +1115,19 @@ footer {
 
 @media (max-width: 960px) {
   nav {
+    height: 100px;
     grid-template-columns: 1fr auto;
     gap: 16px;
   }
 
   .hero-brand-spot {
-    left: 50%;
-    top: 30%;
     width: min(66vw, 360px);
-    transform: translate(-50%, -50%);
     opacity: .16;
   }
 
   .hero-content {
+    padding-top: 30px;
     width: min(100%, 720px);
-    padding-top: 52px;
   }
 
   .hero-headline {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 /* ============================================================
    DRACOL — style.css
    ============================================================ */
@@ -29,7 +30,7 @@ html {
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins' !important;
   background: white;
   color: var(--white);
   overflow-x: hidden;
@@ -96,7 +97,6 @@ nav {
 }
 
 .nav-logo {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem;
   letter-spacing: .1em;
   color: var(--white);
@@ -134,7 +134,7 @@ nav {
   font-weight: 500;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--white);
   text-decoration: none;
   transition: color .2s;
   position: relative;
@@ -187,7 +187,7 @@ nav {
   align-items: center;
   min-height: 100vh;
   display: flex;
-  padding-top: 80px;
+  padding-top: 100px;
   padding-inline: var(--gutter);
   position: relative;
   overflow: hidden;
@@ -290,9 +290,8 @@ nav {
 }
 
 .hero-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3.6rem, 10vw, 7rem);
-  line-height: .92;
+  font-size: clamp(3.6rem, 4rem, 7rem);
+  line-height: 1;
   letter-spacing: .02em;
   color: var(--black);
   animation: fadeUp .9s .1s ease both;
@@ -308,9 +307,9 @@ nav {
 }
 
 .hero-sub {
-  max-width: 480px;
+  max-width: 520px;
   margin: 32px auto 0;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   color: black;
   font-weight: 300;
@@ -318,6 +317,7 @@ nav {
 }
 
 .hero-ctas {
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -332,7 +332,6 @@ nav {
   gap: 10px;
   background: var(--accent);
   color: white;
-  font-size: .88rem;
   font-weight: 600;
   padding: 14px 28px;
   border-radius: 8px;
@@ -353,7 +352,6 @@ nav {
   background: rgba(20, 20, 20, 0.55);
   border: 1px solid var(--border);
   color: var(--white);
-  font-size: .88rem;
   font-weight: 500;
   padding: 14px 28px;
   border-radius: 8px;
@@ -363,8 +361,8 @@ nav {
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, .09);
-  border-color: rgba(255, 255, 255, .13);
+  background: rgba(0, 0, 0, 0.9);
+  border-color: rgba(0, 0, 0, 0.9);
 }
 
 .btn-glass svg {
@@ -393,7 +391,7 @@ nav {
 }
 
 .strip-track span {
-  font-size: .7rem;
+  font-size: .9rem;
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -411,7 +409,7 @@ nav {
 
 /* ── SHARED SECTION ELEMENTS ─────────────────────────────── */
 .section-label {
-  font-size: .68rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -421,28 +419,24 @@ nav {
 
 .section-title {
   color: var(--black);
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-size: clamp(2.6rem, 3rem, 4.5rem);
   letter-spacing: .04em;
   line-height: 1;
 }
 
-.section-title em {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
-  color: var(--black);
-}
+
 
 /* ── ABOUT ───────────────────────────────────────────────── */
 #sobre {
   background-color: white;
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
-  padding: 120px var(--gutter);
+  padding: 100px var(--gutter);
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: clamp(28px, 5vw, 80px);
   align-items: center;
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .about-text .section-title {
@@ -452,11 +446,10 @@ nav {
 
 .about-body {
   color: var(--black);
-  font-size: .96rem;
+  font-size: 1.2rem;
   line-height: 1.85;
-
   font-weight: 300;
-  max-width: 460px;
+  min-width: 500px;
 }
 
 .about-body + .about-body {
@@ -475,8 +468,8 @@ nav {
   font-weight: 600;
   letter-spacing: .08em;
   text-transform: uppercase;
-  border: 1px solid var(--border);
-  color: var(--dim);
+  border: 1px solid var(--black);
+  color: var(--black);
   padding: 7px 16px;
   border-radius: 40px;
   transition: border-color .2s, color .2s;
@@ -488,11 +481,12 @@ nav {
 }
 
 .about-card {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+  margin-top: 40px;
 }
 
 .about-card::before {
@@ -535,6 +529,7 @@ nav {
 }
 
 .about-stat-row {
+  border: 2px solid rgb(175, 175, 175);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
@@ -544,14 +539,13 @@ nav {
 }
 
 .about-stat {
-  background: var(--surface);
+  background: rgb(255, 255, 255);
   padding: 20px 22px;
 }
 
 .about-stat-n {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 2.2rem;
-  color: var(--white);
+  color: var(--black);
   letter-spacing: .04em;
   line-height: 1;
 }
@@ -562,7 +556,7 @@ nav {
 
 .about-stat-l {
   font-size: .7rem;
-  color: var(--dim);
+  color: var(--black);
   letter-spacing: .06em;
   text-transform: uppercase;
   margin-top: 4px;
@@ -571,10 +565,10 @@ nav {
 /* ── COMMITMENTS ─────────────────────────────────────────── */
 #compromissos {
   background-color: white;
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
-  padding: 120px var(--gutter);
-  border-top: 1px solid var(--border);
+  padding: 100px var(--gutter);
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .comp-header {
@@ -589,23 +583,25 @@ nav {
 
 .comp-header-right {
   font-size: .88rem;
-  color: var(--dim);
+  color: var(--black);
   max-width: 320px;
   line-height: 1.7;
 }
 
 .comp-grid {
+
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--border);
-  border: 1px solid var(--border);
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 20px;
   overflow: hidden;
 }
 
 .comp-card {
-  background: var(--card);
+  
+  background: rgb(255, 255, 255);
   padding: 44px 36px;
   position: relative;
   transition: background .3s;
@@ -622,7 +618,7 @@ nav {
 }
 
 .comp-card:hover {
-  background: #161924;
+  background: #ffffff;
 }
 
 .comp-card:hover::after {
@@ -630,10 +626,9 @@ nav {
 }
 
 .comp-num {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 5rem;
   line-height: 1;
-  color: rgba(255, 255, 255, .04);
+  color: rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 16px;
   right: 22px;
@@ -649,12 +644,11 @@ nav {
   width: 52px;
   height: 52px;
   border-radius: 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 28px;
-  background: rgba(255, 255, 255, .03);
   transition: border-color .3s, background .3s;
 }
 
@@ -665,7 +659,7 @@ nav {
 
 .comp-icon svg {
   width: 22px;
-  color: var(--dim);
+  color: var(--black);
   transition: color .3s;
 }
 
@@ -674,30 +668,29 @@ nav {
 }
 
 .comp-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   letter-spacing: .06em;
-  color: var(--white);
+  color: var(--black);
   margin-bottom: 12px;
 }
 
 .comp-desc {
-  font-size: .87rem;
-  color: var(--dim);
+  font-size: 1.1rem;
+  color: var(--black);
   line-height: 1.75;
 }
 
 /* ── SERVICES ────────────────────────────────────────────── */
 #servicos {
   background-color: white;
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
-  padding: 120px var(--gutter);
-  border-top: 1px solid var(--border);
+  padding: 100px var(--gutter);
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .serv-intro {
-  margin-bottom: 72px;
+  margin-bottom: 32px;
 }
 
 .serv-item {
@@ -706,7 +699,7 @@ nav {
   grid-template-areas: 'num info tags';
   align-items: center;
   gap: 32px;
-  padding: 32px 0;
+  padding: 25px 0;
   border-bottom: 1px solid var(--black);
   position: relative;
   transition: padding-left .3s;
@@ -735,10 +728,9 @@ nav {
 
 .serv-num {
   grid-area: num;
-  font-family: 'Instrument Serif', serif;
   font-style: italic;
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, .2);
+  color: rgb(32, 32, 32);
   transition: color .3s;
 }
 
@@ -751,15 +743,14 @@ nav {
 }
 
 .serv-info h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.65rem;
+  font-size: 1.1rem;
   letter-spacing: .06em;
   color: var(--black);
   margin-bottom: 6px;
 }
 
 .serv-info p {
-  font-size: .87rem;
+  font-size: 1rem;
   color: var(--black);
   line-height: 1.6;
 }
@@ -792,16 +783,16 @@ nav {
 /* ── CONTACT ─────────────────────────────────────────────── */
 #contato {
   background-color: white;
-  width: 100%;
+  width: 95%;
   margin-inline: auto;
-  padding: 120px var(--gutter);
+  padding: 100px var(--gutter);
   border-top: 1px solid var(--border);
 }
 
 .contact-wrap {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
-  gap: clamp(28px, 5vw, 64px);
+  gap: clamp(3vw, 6vw, 8vw);
   align-items: start;
 }
 
@@ -810,10 +801,10 @@ nav {
 }
 
 .contact-tagline {
-  font-size: .96rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: var(--black);
-  max-width: 400px;
+  max-width: 450px;
   margin-bottom: 48px;
 }
 
@@ -828,16 +819,15 @@ nav {
   align-items: center;
   gap: 16px;
   padding: 18px 22px;
-  border: 1px solid var(--border);
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 12px;
   text-decoration: none;
-  background: var(--card);
+  background: white;
   transition: border-color .25s, background .25s, transform .2s;
 }
 
 .ch-link:hover {
-  border-color: rgba(34, 211, 238, .2);
-  background: rgba(34, 211, 238, .04);
+  border-color: rgba(140, 240, 255, 0.2);
   transform: translateX(6px);
 }
 
@@ -845,7 +835,7 @@ nav {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--black);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -856,7 +846,7 @@ nav {
 
 .ch-icon svg {
   width: 20px;
-  color: var(--dim);
+  color: var(--black);
   transition: color .25s;
 }
 
@@ -877,18 +867,18 @@ nav {
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--black);
   margin-bottom: 2px;
 }
 
 .ch-value {
-  font-size: .93rem;
-  color: var(--white);
+  font-size: 1.3rem;
+  color: var(--black);
   font-weight: 500;
 }
 
 .ch-arrow {
-  color: var(--dim);
+  color: var(--black);
   transition: transform .2s, color .2s;
 }
 
@@ -898,10 +888,13 @@ nav {
 }
 
 .contact-right {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: white;
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 20px;
-  padding: 48px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
   position: relative;
   overflow: hidden;
 }
@@ -922,20 +915,20 @@ nav {
   right: -60px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(59, 130, 246, .1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(191, 215, 255, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .cf-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
+  color: var(--black);
+  font-size: 2.3rem;
   letter-spacing: .06em;
   margin-bottom: 6px;
 }
 
 .cf-sub {
-  font-size: .83rem;
-  color: var(--dim);
+  font-size: 1.2rem;
+  color: var(--black);
   margin-bottom: 32px;
 }
 
@@ -945,23 +938,22 @@ nav {
 
 .form-field label {
   display: block;
-  font-size: .68rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--black);
   margin-bottom: 8px;
 }
 
 .form-field input,
 .form-field textarea {
   width: 100%;
-  background: rgba(255, 255, 255, .04);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgb(175, 175, 175);
   border-radius: 10px;
   color: var(--white);
-  font-family: 'Outfit', sans-serif;
-  font-size: .9rem;
+  font-size: 1rem;
   padding: 13px 16px;
   outline: none;
   resize: none;
@@ -985,8 +977,7 @@ nav {
   color: white;
   border: none;
   border-radius: 10px;
-  font-family: 'Outfit', sans-serif;
-  font-size: .86rem;
+  font-size: .95rem;
   font-weight: 600;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -1002,12 +993,13 @@ nav {
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 footer {
+  background-color: var(--black);
   border-top: 1px solid var(--border);
   padding: 36px var(--gutter);
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  width: min(100%, var(--content-max));
+  width: 100%;
   margin-inline: auto;
   gap: 20px;
 }
@@ -1019,7 +1011,6 @@ footer {
 }
 
 .footer-brand {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.35rem;
   letter-spacing: .1em;
   color: var(--white);
@@ -1094,7 +1085,7 @@ footer {
   }
 
   .hero-headline {
-    font-size: clamp(3.6rem, 10vw, 7rem);
+    font-size: clamp(3.6rem, 4rem, 7rem);
   }
 }
 
@@ -1203,7 +1194,7 @@ footer {
   }
 
   .hero-headline {
-    font-size: clamp(2.4rem, 12vw, 3.8rem);
+    font-size: clamp(2.4rem, 2.8rem, 3.8rem);
     line-height: .97;
   }
 

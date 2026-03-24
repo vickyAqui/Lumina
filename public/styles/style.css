@@ -482,7 +482,7 @@ nav {
 
 .about-card {
   background: rgb(255, 255, 255);
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
@@ -529,7 +529,7 @@ nav {
 }
 
 .about-stat-row {
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
@@ -594,7 +594,7 @@ nav {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   background: var(--border);
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -819,7 +819,7 @@ nav {
   align-items: center;
   gap: 16px;
   padding: 18px 22px;
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: 12px;
   text-decoration: none;
   background: white;
@@ -889,7 +889,7 @@ nav {
 
 .contact-right {
   background: white;
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   border-radius: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -950,7 +950,8 @@ nav {
 .form-field textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.04);
-  border: 2px solid rgb(175, 175, 175);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: 0;
   border-radius: 10px;
   color: var(--white);
   font-size: 1rem;

@@ -429,6 +429,7 @@ nav {
 /* ── ABOUT ───────────────────────────────────────────────── */
 #sobre {
   background-color: white;
+  height: 100vh;
   width: 100%;
   margin-inline: auto;
   padding: 100px var(--gutter);
@@ -564,8 +565,11 @@ nav {
 
 /* ── COMMITMENTS ─────────────────────────────────────────── */
 #compromissos {
+  display: grid;
+  align-items: center;
   background-color: white;
   width: 100%;
+  height: 100vh;
   margin-inline: auto;
   padding: 100px var(--gutter);
   border-bottom: 1px solid rgb(216, 216, 216);
@@ -576,7 +580,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 64px;
+
   flex-wrap: wrap;
   gap: 24px;
 }
@@ -682,6 +686,9 @@ nav {
 
 /* ── SERVICES ────────────────────────────────────────────── */
 #servicos {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
   background-color: white;
   width: 100%;
   margin-inline: auto;
@@ -782,8 +789,11 @@ nav {
 
 /* ── CONTACT ─────────────────────────────────────────────── */
 #contato {
+  display: grid;
+  align-items: center;
   background-color: white;
   width: 95%;
+  height: 100vh;
   margin-inline: auto;
   padding: 100px var(--gutter);
   border-top: 1px solid var(--border);

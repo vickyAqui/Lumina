@@ -161,6 +161,23 @@ nav {
   transform: scaleX(1);
 }
 
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-nortuno {
+  background-color: transparent;
+  border: none;
+}
+
+.nav-nortuno img {
+  width: 30px;
+  mix-blend-mode: difference;
+}
+
 .nav-pill {
   font-size: .76rem;
   font-weight: 600;

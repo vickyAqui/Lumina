@@ -799,6 +799,10 @@ nav {
 }
 
 .parceiro-comp {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding-bottom: 15px;
+  padding-top: 25px;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -812,12 +816,13 @@ nav {
   justify-content: space-around;
 }
 
-.parceiro-item h1 { 
-  color: black;
-  text-align: center;
-}
+
 
 .parceiro-item img{
+  background-color: rgb(19, 19, 19);
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
   width: 350px;
 }
 
@@ -831,7 +836,7 @@ nav {
   background-color: white;
   flex-direction: row;
   width: 80%;
-  gap: 20px;
+  gap: 100px;
   margin-inline: auto;
 }
 

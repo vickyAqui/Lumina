@@ -435,7 +435,6 @@ nav {
   background-color: white;
   width: 100%;
   margin-inline: auto;
-  padding: 100px var(--gutter);
   padding-top: 18vh !important;
   padding-bottom: 50px !important;
   display: grid;
@@ -569,14 +568,14 @@ nav {
 
 /* ── COMMITMENTS ─────────────────────────────────────────── */
 #compromissos {
-  padding-top: 15vh !important;
   display: grid;
   align-items: center;
+  justify-content: center;
   background-color: white;
   width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
+  padding-top: 132px !important;
   margin-inline: auto;
-  padding: 100px var(--gutter);
   border-bottom: 1px solid rgb(216, 216, 216);
 }
 
@@ -598,7 +597,7 @@ nav {
 }
 
 .comp-grid {
-
+  
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
@@ -680,7 +679,8 @@ nav {
   font-size: 1.4rem;
   letter-spacing: .06em;
   color: var(--black);
-  margin-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 42px;
 }
 
 .comp-desc {
@@ -698,7 +698,6 @@ nav {
   background-color: white;
   width: 100%;
   margin-inline: auto;
-  padding: 100px var(--gutter);
   border-bottom: 1px solid rgb(216, 216, 216);
 }
 
@@ -791,22 +790,55 @@ nav {
   color: var(--accent);
 }
 
+#parceiros {
+  border-bottom: 1px solid rgb(216, 216, 216);
+  display: flex;
+  flex-direction: column;
+  padding-top: 15vh !important;
+  justify-content: center;
+}
+
+.parceiro-comp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.parceiro-list{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.parceiro-item h1 { 
+  color: black;
+  text-align: center;
+}
+
+.parceiro-item img{
+  width: 350px;
+}
+
+
 /* ── CONTACT ─────────────────────────────────────────────── */
 #contato {
-  padding-top: 15vh !important;
   min-height: 100vh;
   justify-content: space-between;
   display: flex;
   align-items: center;
   background-color: white;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
+  gap: 20px;
   margin-inline: auto;
-  padding: 100px var(--gutter);
-  border-top: 1px solid var(--border);
 }
 
-
+#contato, #parceiros, #compromissos, #sobre, #servicos{
+  padding: 50px var(--gutter);
+  
+}
 
 
 .contact-tagline {
@@ -962,7 +994,7 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border: 0;
   border-radius: 10px;
-  color: var(--white);
+  color: var(--black);
   font-size: 1rem;
   padding: 13px 16px;
   outline: none;

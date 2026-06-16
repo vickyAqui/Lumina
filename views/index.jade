@@ -15,6 +15,7 @@ block content
       li: a(href='#sobre') Sobre
       li: a(href='#compromissos') Compromissos
       li: a(href='#servicos') Serviços
+      li: a(href='#projetos') Projetos
       li: a(href='#parceiros') Parceiros
       li: a(href='#contato') Contato
 
@@ -247,6 +248,81 @@ block content
             span.serv-tag Arquitetura
             span.serv-tag Segurança
 
+  section#projetos
+      .serv-intro.reveal
+        p.section-label Trabalhos recentes
+        h2.section-title
+          | Projetos que
+          br
+          | transformaram negócios
+
+      .projetos-grid.reveal
+        .proj-card
+          .proj-image(style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);")
+            svg(viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5')
+              rect(x='3' y='3' width='18' height='18' rx='2')
+              path(d='M9 9h6M9 15h6')
+
+          .proj-content
+            .proj-tag Desenvolvimento Web
+            h3.proj-title Plataforma ERP Integrada
+            p.proj-desc
+              | Sistema de gestão empresarial com dashboard em tempo real, controle financeiro
+              | e integração com ERPs existentes. Resultado: redução de 40% no tempo operacional.
+            .proj-tech
+              span.proj-tech-item Node.js
+              span.proj-tech-item React
+              span.proj-tech-item PostgreSQL
+
+        .proj-card
+          .proj-image(style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);")
+            svg(viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5')
+              path(d='M12 2L15.09 8.26H22L17.82 12.61L20.16 18.97L12 14.9L3.84 18.97L6.18 12.61L2 8.26H8.91L12 2Z')
+
+          .proj-content
+            .proj-tag App Mobile
+            h3.proj-title App de Delivery Premium
+            p.proj-desc
+              | Aplicativo mobile nativo para iOS e Android com sistema de rastreamento GPS,
+              | pagamentos integrados e interface intuitiva. Mais de 50 mil downloads.
+            .proj-tech
+              span.proj-tech-item React Native
+              span.proj-tech-item Firebase
+              span.proj-tech-item Stripe
+
+        .proj-card
+          .proj-image(style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);")
+            svg(viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5')
+              path(d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z')
+
+          .proj-content
+            .proj-tag Consultoria & Automação
+            h3.proj-title Sistema de Automação Comercial
+            p.proj-desc
+              | Plataforma de automação para e-commerce integrando gerenciamento de estoque,
+              | marketplace e CRM. Aumento de 60% na eficiência operacional do cliente.
+            .proj-tech
+              span.proj-tech-item Python
+              span.proj-tech-item APIs REST
+              span.proj-tech-item AWS
+
+        .proj-card
+          .proj-image(style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);")
+            svg(viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.5')
+              path(d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z')
+              polyline(points='9 22 9 12 15 12 15 22')
+
+          .proj-content
+            .proj-tag Website Corporativo
+            h3.proj-title Redesign Site Imobiliário
+            p.proj-desc
+              | Portal imobiliário com busca avançada, visualização 3D de imóveis e gestão de anúncios.
+              | Conversão de leads aumentou 85% em 3 meses.
+            .proj-tech
+              span.proj-tech-item Next.js
+              span.proj-tech-item Three.js
+              span.proj-tech-item Vercel
+
   section#parceiros 
       .serv-intro.reveal
         p.section-label Nossos colaboradores
@@ -311,19 +387,26 @@ block content
         h3.cf-title Envie uma mensagem
         p.cf-sub Retornamos em até 1 dia útil.
 
-        .form-field
-          label Nome
-          input(type='text' placeholder='Seu nome completo')
+        form#contactForm
+          .form-field
+            label Nome
+            input#nomeInput(type='text' placeholder='Seu nome completo' required)
 
-        .form-field
-          label Email
-          input(type='email' placeholder='seu@email.com')
+          .form-field
+            label Email
+            input#emailInput(type='email' placeholder='seu@email.com' required)
 
-        .form-field
-          label Mensagem
-          textarea(placeholder='Conte-nos sobre seu projeto…')
+          .form-field
+            label Telefone
+            input#telefoneInput(type='tel' placeholder='(11) 99999-9999')
 
-        button.form-submit Enviar mensagem →
+          .form-field
+            label Mensagem
+            textarea#mensagemInput(placeholder='Conte-nos sobre seu projeto…' required)
+
+          button.form-submit(type='submit') Enviar mensagem →
+          
+          .form-status#formStatus(style='display: none;')
 
   //- ── FOOTER ───────────────────────────────────────────
   footer
@@ -336,11 +419,70 @@ block content
         li: a(href='#sobre') Sobre
         li: a(href='#compromissos') Compromissos
         li: a(href='#servicos') Serviços
+        li: a(href='#projetos') Projetos
         li: a(href='#parceiros') Parceiros
         li: a(href='#contato') Contato
 
   //- ── SCRIPTS ──────────────────────────────────────────
   script.
+      // Contact form handler
+      const contactForm = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+
+          const nome = document.getElementById('nomeInput').value;
+          const email = document.getElementById('emailInput').value;
+          const telefone = document.getElementById('telefoneInput').value;
+          const mensagem = document.getElementById('mensagemInput').value;
+          const submitBtn = contactForm.querySelector('.form-submit');
+
+          // Show loading state
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Enviando...';
+          submitBtn.disabled = true;
+
+          try {
+            const response = await fetch('/enviar-contato', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                nome,
+                email,
+                telefone,
+                mensagem,
+                tipo: 'Contato Website'
+              })
+            });
+
+            const resultado = await response.json();
+
+            formStatus.style.display = 'block';
+            
+            if (resultado.sucesso) {
+              formStatus.style.color = '#22c55e';
+              formStatus.textContent = '✓ ' + resultado.mensagem;
+              contactForm.reset();
+            } else {
+              formStatus.style.color = '#ef4444';
+              formStatus.textContent = '✗ ' + resultado.mensagem;
+            }
+          } catch (erro) {
+            formStatus.style.display = 'block';
+            formStatus.style.color = '#ef4444';
+            formStatus.textContent = '✗ Erro ao enviar mensagem';
+            console.error('Erro:', erro);
+          } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        });
+      }
+
       // Custom cursor
       const cur  = document.getElementById('cursor');
       const ring = document.getElementById('cursor-ring');

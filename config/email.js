@@ -3,9 +3,6 @@ const nodemailer = require('nodemailer');
 
 // Criar transportador de email
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
   service: process.env.EMAIL_SERVICE || 'gmail',
   auth: {
     user: "victoria.o.peixoto@gmail.com",
@@ -27,7 +24,7 @@ const enviarEmailContato = async (dados) => {
   const { nome, email, telefone, mensagem, tipo } = dados;
 
   const mailOptions = {
-    from: "LuminaCont@lumina.com" || "victoria.o.peixoto@gmail.com",
+    from: "victoria.o.peixoto@gmail.com",
     to: "victoria.o.peixoto@gmail.com",
     subject: `Novo contato - ${tipo || 'Geral'}`,
     html: `
@@ -42,7 +39,7 @@ const enviarEmailContato = async (dados) => {
   };
 
   try {
-    transporter.sendMail(mailOptions);
+    await transporter.sendMail(mailOptions);
     return { sucesso: true, mensagem: 'Email enviado com sucesso!' };
   } catch (erro) {
     console.error('Erro ao enviar email:', erro);

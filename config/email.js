@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE || 'gmail',
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: "victoria.o.peixoto@gmail.com",
+    pass: "iqnk hrgl zczk djtz",
   },
 });
 
@@ -24,8 +24,8 @@ const enviarEmailContato = async (dados) => {
   const { nome, email, telefone, mensagem, tipo } = dados;
 
   const mailOptions = {
-    from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER,
+    from: "LuminaCont@lumina.com" || "victoria.o.peixoto@gmail.com",
+    to: "victoria.o.peixoto@gmail.com",
     subject: `Novo contato - ${tipo || 'Geral'}`,
     html: `
       <h2>Novo contato recebido</h2>
@@ -50,7 +50,7 @@ const enviarEmailContato = async (dados) => {
 // Função para enviar email de confirmação ao cliente
 const enviarConfirmacao = async (email, nome) => {
   const mailOptions = {
-    from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
+    from: "LuminaCont@lumina.com" || "victoria.o.peixoto@gmail.com",
     to: email,
     subject: 'Recebemos sua mensagem - Lumina',
     html: `

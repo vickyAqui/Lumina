@@ -39,7 +39,7 @@ const enviarEmailContato = async (dados) => {
   };
 
   try {
-    await transporter.sendMail(mailOptions);
+    transporter.sendMail(mailOptions);
     return { sucesso: true, mensagem: 'Email enviado com sucesso!' };
   } catch (erro) {
     console.error('Erro ao enviar email:', erro);
